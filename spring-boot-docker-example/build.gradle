@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE')
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+apply plugin: 'org.springframework.boot'
+
+bootJar {
+    baseName = 'spring-boot-docker'
+    version = 'laster'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:2.1.3.RELEASE")
+}
+
+
+
